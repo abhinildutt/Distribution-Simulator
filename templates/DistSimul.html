@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{{ url_for('static', filename='DistSimul.css') }}">
+    <header>
+        <h1 style="text-align: center;" class="topmid"> My Simulator </h1>
+    </header>
+    <body>
+        <form action="/result" method="POST">
+            <input type = "submit" class="button1" value = "Run!" name = "run">
+            <div class="div1">
+                <p style="font-size: 25px; margin-left: 25px;"> Configuration </p>
+                <br/><br/>
+                <b style="margin-left: 25px; margin-top: 50px;"> Distribution to simulate</b>
+                <br/><br/>
+                <div style="margin-left: 25px;">
+                    <select name="distribution-type" id="dist-type">
+                        <option value="Uniform">Uniform Distribution</option>
+                        <option value="Normal">Normal Distribution</option>
+                        <option value="Exponential">Exponential Distribution</option>
+                    </select>
+                </div>
+                <br/>
+                <p></p>
+                <b style="margin-left: 25px; margin-top: 50px;"> Mean</b>
+                <p><input name = "mean" type="text" placeholder="Mean" style="margin-left: 25px"></p>
+                <b style="margin-left: 25px; margin-top: 50px;"> Standard Deviation</b>
+                <p><input name = "stddev" type="text" placeholder="Standard Deviation" style="margin-left: 25px"></p>
+
+            </div>
+            <div class="div3">
+                <p> {{ placeholder }} </p>
+            </div>
+            <div class="div2">
+                <p style="font-size: 25px; margin-left: 25px;"> Profile </p>
+                <b style="margin-left: 25px; margin-top: 50px; color: rgb(1, 0, 5);"> Total Latency : </b><b> {{ g.request_time()}} </b>
+                <br/><br/>
+                <b style="margin-left: 25px; margin-top: 50px; color: rgb(150, 103, 16);"> Simulation Time : </b><b> {{ t1 }} </b>
+                <br/><br/>
+                <b style="margin-left: 25px; margin-top: 50px; color: rgb(25, 143, 45);"> Network Overhead : </b><b> {{ g.request_p() }}</b>
+                <div style=" z-index: -2; border: 2px solid black;margin-top: 50px;" >
+                    <p> {{ g.request_graph(g.st, g.nt - g.st) }} </p>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
