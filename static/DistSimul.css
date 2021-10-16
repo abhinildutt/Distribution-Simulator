@@ -1,3 +1,15 @@
+
+@media screen {
+  .button1 {  
+    padding: 20px 50px;
+    transition-duration: 0.4s;
+    border-radius: 4px;
+    margin-left: 25vw;
+    text-align: center;
+    background-color: white;  
+    border: 2px solid black;
+    font-size: 17px;  
+  } 
 h1 {
     font-style: normal;
     font-family: sans-serif;
@@ -15,16 +27,7 @@ h1 {
     height: 100px;  
     padding-top: 100px;  
 }
-.button1 {  
-    padding: 20px 50px;
-    transition-duration: 0.4s;
-    border-radius: 4px;
-    margin-left: -475px;
-    text-align: center;
-    background-color: white;  
-    border: 2px solid black;
-    font-size: 17px;  
-}  
+ 
 .button1:hover {
     background-color: black;
     color: white;
@@ -33,45 +36,36 @@ header{
     text-align: center;
 }
 .div1 {
-    width: 310px;
+    width: 20vw;
     height: 540px;
     padding: 0px;
     border: 2px solid black;
     margin-left: -10px; 
-    margin-top: -60px;
+    margin-top: 10px;
     float: left;
   }
 .div3 {
-    width: 812px;
+    width: 50vw;
     height: 449px;
     padding: 0px;
-    margin-top: 90px;
+    margin-left: 5vw;
+    margin-top: 5vh;
     float: left;
   }
 .div2 {
-    z-index: 20;
     float: right;
-    width: 310px;
+    width: 20vw;
     height: 540px;
-    padding: 0px;
     border: 2px solid black;
     margin-right: -10px; 
     margin-top: -60px;
+    overflow: hidden;
   }
-  .dropbtn {
-    background-color: white;
-    text-align: left;
-    border: 2px solid black;
-    padding: 20px 40px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  input[type=text], select {
+input[type=text], select {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid rgb(12, 11, 11);
     border-radius: 4px;
   }
-
-  
+}

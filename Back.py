@@ -70,7 +70,6 @@ def result():
         type = request.form.get('distribution-type')
     except:
         return render_template('DistSimul.html', ex = "Please enter values in all fields and in correct data types! ")
-    
     start = time.time()
 
     if(type == "Uniform"):

@@ -37,7 +37,7 @@
                 <b style="margin-left: 25px; margin-top: 50px; color: rgb(150, 103, 16);"> Simulation Time : </b><b> {{ t1 }} </b>
                 <br/><br/>
                 <b style="margin-left: 25px; margin-top: 50px; color: rgb(25, 143, 45);"> Network Overhead : </b><b> {{ g.request_p() }}</b>
-                <div style=" z-index: -2; border: 2px solid black;margin-top: 50px;" >
+                <div style=" z-index: -2;margin-top: 30px; overflow: hidden;" >
                     <p> {{ g.request_graph(g.st, g.nt - g.st) }} </p>
                 </div>
             </div>
