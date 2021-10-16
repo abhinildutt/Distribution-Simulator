@@ -64,11 +64,13 @@ def DistSimul():
 def result():
     t = request.values.get('t', 0)
     time.sleep(float(t)) 
-
-    mean = float(request.form.get('mean'))
-    stddev = float(request.form.get('stddev'))
-    type = request.form.get('distribution-type')
-
+    try:
+        mean = float(request.form.get('mean'))
+        stddev = float(request.form.get('stddev'))
+        type = request.form.get('distribution-type')
+    except:
+        return render_template('DistSimul.html', ex = "Please enter values in all fields and in correct data types! ")
+    
     start = time.time()
 
     if(type == "Uniform"):
