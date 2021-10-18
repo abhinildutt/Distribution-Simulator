@@ -11,8 +11,8 @@ How To Run the Application:
 
 ----Download Links---
 
-Python - https://www.python.org/downloads/
-Plotly - Installation section under https://plotly.com/python/getting-started/#installation
-Flask - https://pypi.org/project/Flask/
-Pandas - https://pandas.pydata.org/docs/getting_started/install.html
-Scipy - https://www.scipy.org/install.html
+1.Python - https://www.python.org/downloads/
+2.Plotly - Installation section under https://plotly.com/python/getting-started/#installation
+3.Flask - https://pypi.org/project/Flask/
+4.Pandas - https://pandas.pydata.org/docs/getting_started/install.html
+5.Scipy - https://www.scipy.org/install.html
