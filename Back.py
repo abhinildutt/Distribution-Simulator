@@ -54,7 +54,7 @@ def before_request():
     g.request_time = lambda: ""
     g.request_graph = lambda x1, x2: ""
     g.st = 0
-    g.nt = 0
+    g.nt = lambda: int(0)
 
 p = 0
 @app.route('/')
@@ -89,7 +89,7 @@ def result():
     g.request_graph = lambda x1, x2: Markup(graph(x1, x2))
 
     g.st = (end- start)*1000
-    g.nt = (time.time() - g.request_start_time)*1000
+    g.nt = lambda: ((time.time() - g.request_start_time)*1000)
     return render_template('DistSimul.html', placeholder=Markup(my_plot_div), t1 = "{:.3f}".format((end- start)*1000)+" ms" , t = (end-start)*1000)
 
 

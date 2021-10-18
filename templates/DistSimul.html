@@ -2,7 +2,7 @@
 <html>
     <link rel="stylesheet" href="{{ url_for('static', filename='DistSimul.css') }}">
     <header>
-        <h1 style="text-align: center;" class="topmid"> My Simulator </h1>
+        <h1 style="text-align: left;" class="topmid"> My Simulator </h1>
     </header>
     <body>
         <form action="/result" method="POST">
@@ -38,7 +38,7 @@
                 <br/><br/>
                 <b style="margin-left: 25px; margin-top: 50px; color: rgb(25, 143, 45);"> Network Overhead : </b><b> {{ g.request_p() }}</b>
                 <div style=" z-index: -2;margin-top: 30px; overflow: hidden;" >
-                    <p> {{ g.request_graph(g.st, g.nt - g.st) }} </p>
+                    <p> {{ g.request_graph(g.st, g.nt() - g.st) }} </p>
                 </div>
             </div>
         </form>
